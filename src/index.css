@@ -1,0 +1,46 @@
+@import "tailwindcss";
+/* Change the color of the slider handle */
+.ant-slider-handle {
+  background-color: #ff6347; /* Custom color for the handle (e.g., Tomato) */
+  border-color: #ff6347; /* Border color for the handle */
+  height: 20px; /* Handle size */
+  width: 20px; /* Handle size */
+  border-radius: 50%; /* Round handle */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.custom-slider::-webkit-slider-thumb {
+  background-color: #ff6347; /* Red color for the slider handle */
+  border: 2px solid #ff6347; /* Border color for the handle */
+  height: 20px; /* Handle size */
+  width: 20px; /* Handle size */
+  border-radius: 50%; /* Round handle */
+}
+
+/* For Firefox */
+.custom-slider::-moz-range-thumb {
+  background-color: #9c2f1c; /* Red color for the slider handle */
+  border: 2px solid #ff6347; /* Border color for the handle */
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+/* For Internet Explorer */
+.custom-slider::-ms-thumb {
+  background-color: #ff6347; /* Red color for the slider handle */
+  border: 2px solid #ff6347; /* Border color for the handle */
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+/* Optional: Change slider track color (light grey) */
+.ant-slider-track {
+  background-color: #b02222; /* Light grey color for the track */
+}
+
+/* Optional: Change slider rail color (darker grey) */
+.ant-slider-rail {
+  background-color: #b10f0f; /* Darker grey color for the rail */
+}
