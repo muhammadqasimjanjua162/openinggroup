@@ -5,7 +5,8 @@
   border-color: #ff6347; /* Border color for the handle */
   height: 20px; /* Handle size */
   width: 20px; /* Handle size */
-  border-radius: 50%; /* Round handle */
+  border-radius: 50%;
+  margin-bottom: 20px; /* Round handle */
 }
 
 /* For Webkit browsers (Chrome, Safari, Edge) */
@@ -43,4 +44,7 @@
 /* Optional: Change slider rail color (darker grey) */
 .ant-slider-rail {
   background-color: #b10f0f; /* Darker grey color for the rail */
+}
+.ant-slider .ant-slider-handle::after {
+  display: none;
 }

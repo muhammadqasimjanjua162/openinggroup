@@ -5,29 +5,33 @@ import footerproperty from "../../assets/img/footer/footerpropertylogo.webp";
 
 const FooterBadges = () => {
   return (
-    <div className="flex gap-x-4 mx-12">
-      <div className="flex w-8/14 gap-16">
-        <img src={badgeImg} alt="Description" className="w-[25%] h-[60%]" />
-        <img src={badgeImg} alt="Description" className="w-[25%] h-[60%]" />
-        <img src={badgeImg} alt="Description" className="w-[25%] h-[60%]" />
+    <div className="flex gap-x-28 mx-12">
+      <div className="flex w-9/16 gap-x-6 bg-amber-200">
+        <img
+          src={badgeImg}
+          alt="Description"
+          className="w-[33%] object-contain"
+        />
+        <img
+          src={badgeImg}
+          alt="Description"
+          className="w-[33%] object-contain"
+        />
+        <img
+          src={badgeImg}
+          alt="Description"
+          className="w-[33%] object-contain "
+        />
       </div>
-      <div className="flex gap-x-4 w-6/14">
-        <img src={footerlogo} alt="Description" className="w-[25%] h-[50%]" />
+      <div className="flex gap-x-4 w-7/16 bg-amber-800">
         <img
-          src={footerproperty}
+          src={footerlogo}
           alt="Description"
-          className="w-[20%] h-[70%]"
+          className="w-[40%] h-[50%] object-contain"
         />
-        <img
-          src={footerproperty}
-          alt="Description"
-          className="w-[20%] h-[70%]"
-        />
-        <img
-          src={footerproperty}
-          alt="Description"
-          className="w-[20%] h-[70%]"
-        />
+        <img src={footerproperty} alt="Description" className="w-[20%]" />
+        <img src={footerproperty} alt="Description" className="w-[20%]" />
+        <img src={footerproperty} alt="Description" className="w-[20%]" />
       </div>
     </div>
   );

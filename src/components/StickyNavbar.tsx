@@ -117,7 +117,7 @@ const StickyNavbar = () => {
             </ul>
           </nav>
 
-          <div className="flex items-center space-x-6 bg-green-500">
+          <div className="flex items-center space-x-6">
             {/* <a href="tel:+1.323.488.3038">
               <img
                 src="https://la.ogroup.com/wp-content/themes/ogroup.com/images/site-phone-a.png"
