@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 50) {
       setIsSticky(true); // Show sticky navbar after scrolling 100px
     } else {
       setIsSticky(false); // Hide sticky navbar when scrolling back up
