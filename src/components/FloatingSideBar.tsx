@@ -9,27 +9,27 @@ import { PiLineVerticalThin } from "react-icons/pi";
 const FloatingSideBar = () => {
   return (
     <div className="flex flex-col justify-center items-center fixed">
-      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-green-300 text-green-700 flex justify-center items-center">
+      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
         {" "}
-        <FaFacebookF />
+        <FaFacebookF className="bg-gray-300 text-black" />
       </div>
       <div className="border-l border-gray-100  h-14"></div>
 
-      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-green-300 text-green-700 flex justify-center items-center">
-        <RiTwitterXLine />
+      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
+        <RiTwitterXLine className="text-black" />
       </div>
       <div className="border-l border-gray-100  h-6"></div>
 
-      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-green-300 text-green-700 flex justify-center items-center">
-        <FaYoutube />
+      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
+        <FaYoutube className="text-black" />
       </div>
       <div className="border-l border-gray-100  h-6"></div>
-      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-green-300 text-green-700 flex justify-center items-center">
-        <FaLinkedinIn />
+      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
+        <FaLinkedinIn className="text-black" />
       </div>
       <div className="border-l border-gray-100  h-6"></div>
-      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-green-300 text-green-700 flex justify-center items-center">
-        <FaInstagram />
+      <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
+        <FaInstagram className="text-black" />
       </div>
     </div>
   );
