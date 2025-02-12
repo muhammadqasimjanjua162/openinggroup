@@ -7,6 +7,7 @@ import FormLeft from "./components/FormLeft";
 import { Sidebar } from "lucide-react";
 import PropertyDisplay from "./components/PropertyDisplay";
 import propertyImg from "../src/assets/img/propertyImages/new.webp";
+import FloatingSideBar from "./components/FloatingSideBar";
 
 function App() {
   const propertyData = [
@@ -87,7 +88,7 @@ function App() {
   const secondColumn = propertyData.slice(splitIndex);
   return (
     <>
-      <div>
+      <div className="relative bg-green-500">
         <Header />
 
         <div className="flex">
@@ -122,10 +123,14 @@ function App() {
                   totalprice={property.totalprice}
                   perMonth={property.perMonth}
                   img={property.img}
+                  address={property.address}
                 />
               </div>
             ))}
           </div>
+        </div>
+        <div className="absolute left-[95%] top-[2%] md:left-[90%] md:top-[5%] lg:left-[95%] lg:top-[2%] xl:left-[96%] xl:top-[2.2%]">
+          <FloatingSideBar />
         </div>
 
         {/* <Form /> */}
