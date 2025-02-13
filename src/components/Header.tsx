@@ -5,6 +5,7 @@ import olpheian from "../assets/img/olpheian.webp";
 import Sidebar from "../components/Sidebar";
 import NonStickyNavbar from "./NonStickyNavbar";
 import StickyNavbar from "./StickyNavbar";
+import innerBackground from "../assets/img/inner-background-header.webp";
 
 const Header: React.FC = () => {
   // console.log(props, "myprops");
@@ -49,17 +50,17 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <header className="header relative w-full" style={{ height: "280px" }}>
-        {/* Background Image Wrapper */}
+      <header
+        className="header relative  h-[280px] bg-conatin bg-no-repeat"
+        style={{ backgroundImage: `url(${innerBackground})` }}
+      >
+        {/* Background Image Wrapper with blend mode */}
         <div
-          className="absolute inset-0 z-0" // Absolute positioning for the background image container
+          className="absolute inset-0 z-0 bg-cover bg-no-repeat filter grayscale bg-blend-overlay bg-right-top w-[100%]"
           style={{
-            backgroundImage: `url(${headerBg})`, // Background image URL
-            backgroundSize: "cover", // Ensures the background covers the entire header
-            backgroundPosition: "center", // Centers the background image
-            backgroundRepeat: "no-repeat", // Prevents background image repetition
-            filter: "grayscale(100%)", // Applies grayscale only to the background image
-            backgroundColor: "rgba(0, 0, 0, 0.9)", // Dark overlay (adjust opacity as needed)
+            backgroundImage: `url(${headerBg})`,
+            backgroundColor: "rgba(13, 13, 13, 0.5)",
+            // RGBA color for the overlay
           }}
         ></div>
 
@@ -76,7 +77,6 @@ const Header: React.FC = () => {
             className="w-full sm:w-80 md:w-96 lg:w-116 object-cover rounded-lg mt-16"
             src={olpheian}
             alt="Responsive Image"
-            style={{ filter: "none" }} // This ensures the grayscale is not applied to this image
           />
         </div>
 

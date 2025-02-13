@@ -28,12 +28,14 @@ const Sidebar = ({ navBarshow, setNavbar, ref }) => {
             <rect y="60" width="100" height="10"></rect>
           </svg>
         )}
-
+<div className="animate-fade-left">
+    
+</div>
         <div
           ref={ref}
-          className={`fixed top-0 right-0 w-[68vw] h-full bg-[#171717] bg-[url(${sidebarBg})] text-white p-10 pl-20 z-40
-  transition-transform duration-[0000ms] cubic-bezier(0.25, 0.8, 0.25, 1)
-  ${navBarshow ? "translate-x-0" : "translate-x-full"}`}
+          className={`fixed top-0 right-[500px] w-[68vw] h-full bg-[#171717] bg-[url(${sidebarBg})] text-white p-10 pl-20 z-40
+          transition-all duration-[1000ms] ease-in-out
+          ${navBarshow ? "right-0" : "right-[500px]"}`}
         >
           <img src={logo} alt="Logo" className="w-[55%] h-auto mb-18 mt-8" />
           <div className="mt-6">

@@ -88,7 +88,7 @@ function App() {
   const secondColumn = propertyData.slice(splitIndex);
   return (
     <>
-      <div className="relative bg-green-500">
+      <div>
         <Header />
 
         <div className="flex">
