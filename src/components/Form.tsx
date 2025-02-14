@@ -5,16 +5,17 @@ import { IconSlider } from "./Slider";
 const Form = () => {
   return (
     <div
+      className="mb-10"
       style={{
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.72)),url(${formBg})`,
       }}
     >
       <form
-        className="our-properties-form m-4  bg-[rgba(27,27,27,0.9)] p-10 flex"
+        className="our-properties-form py-4 bg-[rgba(27,27,27,0.9)] p-10 flex"
         method="GET"
         action="https://la.ogroup.com/properties/our-properties/"
       >
-        <div className="w-6/8">
+        <div className="w-7/10">
           <div className="our-properties-form-title mb-6">
             <span className="text-lg font-semibold text-white uppercase">
               Search <b>The Oppenheim Group Listings</b>
@@ -23,20 +24,20 @@ const Form = () => {
 
           <div className="our-properties-form-content flex flex-wrap justify-between gap-10">
             {/* Left Side Inputs */}
-            <div className="our-properties-form-left w-full flex flex-wrap gap-10">
+            <div className="our-properties-form-left w-full flex flex-wrap gap-5">
               {/* Price */}
-              <div className="form-group  w-[35%] text-white uppercase">
+              <div className="form-group  w-[45%] text-white uppercase  flex flex-col">
                 <label
                   htmlFor="listings-price"
-                  className="block text-sm font-mediu"
+                  className="block text-xs font-medium"
                 >
                   Price
                 </label>
                 <IconSlider min={0} max={100} />
               </div>
 
-              <div className="form-group w-[35%] text-white">
-                <select className="block w-full shadow-sm text-black uppercase border-b-1 border-gray-300 appearance-none  focus:outline-none focus:border-b-2 py-2">
+              <div className="form-group w-[45%] text-white uppercase">
+                <select className="block w-full shadow-sm text-black border-b-1 border-gray-300 appearance-none  focus:outline-none focus:border-b-2 py-2 text-xs uppercase">
                   <option className="text-white uppercase" selected>
                     Neighborhood
                   </option>
@@ -59,9 +60,9 @@ const Form = () => {
               </div>
 
               {/* Min Beds */}
-              <div className="form-group w-[35%] text-white">
-                <select className="block w-full shadow-sm text-black uppercase border-b-1 border-gray-300 appearance-none  focus:outline-none focus:border-b-2 py-2">
-                  <option value="" className="text-black">
+              <div className="form-group w-[45%] text-white">
+                <select className="block w-full shadow-sm text-xs text-black uppercase border-b-1 border-gray-300 appearance-none  focus:outline-none focus:border-b-2 py-2">
+                  <option value="" className="text-black text-xs">
                     Min Beds
                   </option>
                   <option value="1" className="text-black">
@@ -77,7 +78,7 @@ const Form = () => {
               </div>
 
               {/* Min Baths */}
-              <div className="form-group w-[35%] text-white">
+              <div className="form-group w-[45%] text-white">
                 <select className="block w-full shadow-sm text-black uppercase border-b-1 border-gray-300 appearance-none  focus:outline-none focus:border-b-2 py-2">
                   <option className="text-white uppercase" value="">
                     Min Baths
@@ -95,7 +96,7 @@ const Form = () => {
               </div>
 
               {/* Search by Address */}
-              <div className="form-group w-[70%] text-white">
+              <div className="form-group w-[90%] text-white">
                 <input
                   type="text"
                   name="address"
@@ -107,24 +108,53 @@ const Form = () => {
 
               {/* Checkbox */}
 
-              <div className="form-group w-[70%]">
-                <label className="inline-flex items-center text-sm text-gray-600">
-                  <input type="checkbox" name="all-listings" className="mr-2" />
-                  All Listings
-                  <input type="checkbox" name="los-angeles" className="mr-2" />
-                  Loss Angeles
-                  <input type="checkbox" name="all-listings" className="mr-2" />
-                  Orange county
+              <div className="form-group w-[80%]">
+                <label className="inline-flex items-center text-sm text-gray-600 space-x-4">
+                  <input
+                    type="checkbox"
+                    name="all-listings"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">All Listings</span>
+
+                  <input
+                    type="checkbox"
+                    name="los-angeles"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">Los Angeles</span>
+
+                  <input
+                    type="checkbox"
+                    name="orange-county"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">Orange County</span>
                 </label>
               </div>
-              <div className="form-group w-[70%]">
-                <label className="inline-flex items-center text-sm text-gray-600">
-                  <input type="checkbox" name="all-listings" className="mr-2" />
-                  All Listings
-                  <input type="checkbox" name="los-angeles" className="mr-2" />
-                  Loss Angeles
-                  <input type="checkbox" name="all-listings" className="mr-2" />
-                  Orange county
+
+              <div className="form-group w-[80%]">
+                <label className="inline-flex items-center text-sm text-gray-600 space-x-4">
+                  <input
+                    type="checkbox"
+                    name="all-listings"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">All Listings</span>
+
+                  <input
+                    type="checkbox"
+                    name="los-angeles"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">Los Angeles</span>
+
+                  <input
+                    type="checkbox"
+                    name="orange-county"
+                    className="mr-2 w-6 h-6 border-2 border-red-500 bg-transparent checked:bg-red-500 checked:border-red-500 focus:ring-0"
+                  />
+                  <span className="uppercase text-white">Orange County</span>
                 </label>
               </div>
             </div>
@@ -132,7 +162,7 @@ const Form = () => {
             {/* Search Button on Right */}
           </div>
         </div>
-        <div className="w-2/8 flex justify-center items-center">
+        <div className="w-3/10 flex justify-center items-center">
           <div className="our-properties-form-right text-white uppercase">
             <button
               type="submit"

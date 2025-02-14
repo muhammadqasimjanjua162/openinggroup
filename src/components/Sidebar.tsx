@@ -28,9 +28,7 @@ const Sidebar = ({ navBarshow, setNavbar, ref }) => {
             <rect y="60" width="100" height="10"></rect>
           </svg>
         )}
-<div className="animate-fade-left">
-    
-</div>
+        <div className="animate-fade-left"></div>
         <div
           ref={ref}
           className={`fixed top-0 right-[500px] w-[68vw] h-full bg-[#171717] bg-[url(${sidebarBg})] text-white p-10 pl-20 z-40

@@ -8,7 +8,7 @@ import { PiLineVerticalThin } from "react-icons/pi";
 
 const FloatingSideBar = () => {
   return (
-    <div className="flex flex-col justify-center items-center fixed">
+    <div className="flex flex-col justify-center items-center mt-10 fixed">
       <div className="w-9 h-9 shrink-0 grow-0 rounded-full bg-gray-300 text-green-700 flex justify-center items-center">
         {" "}
         <FaFacebookF className="bg-gray-300 text-black" />

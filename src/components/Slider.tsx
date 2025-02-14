@@ -17,29 +17,23 @@ export const IconSlider: React.FC<IconSliderProps> = (props) => {
   const nextColorCls = value >= mid ? "icon-wrapper-active" : "";
 
   return (
-    <div className="flex items-center w-96 space-x-4">
-      <p
-        style={{ margin: 0 }}
-        className="text-lg font-semibold w-10 text-left mb-0"
-      >
-        ${min}
-      </p>
-
+    <div className="flex flex-col gap-0">
       <Slider
         min={min}
         max={max}
         value={value}
         onChange={setValue}
-        className="w-[35%]"
+        className="w-[100%]"
         styles={{
           handle: {
             backgroundColor: "red", // Handle (thumb) color
             borderColor: "darkred", // Handle border color
-            height: "20px", // Handle height
-            width: "20px", // Handle width
+            height: "12px", // Handle height
+            width: "12px",
+            margin: 0, // Handle width
           },
           track: {
-            backgroundColor: "white", // Track (filled part) color
+            backgroundColor: "red", // Track (filled part) color
             height: "4px", // Track height
           },
           rail: {
@@ -48,12 +42,20 @@ export const IconSlider: React.FC<IconSliderProps> = (props) => {
           },
         }}
       />
-      <p
-        style={{ marginBottom: 0 }}
-        className="text-lg font-semibold w-10 text-left mb-0"
-      >
-        ${value}
-      </p>
+      <div className="flex justify-between">
+        <p
+          style={{ margin: 0 }}
+          className="font-semibold w-10 text-left text-sm"
+        >
+          ${min}
+        </p>
+        <p
+          style={{ marginBottom: 0 }}
+          className="font-semibold w-10 text-left text-sm"
+        >
+          ${value}
+        </p>
+      </div>
     </div>
   );
 };
