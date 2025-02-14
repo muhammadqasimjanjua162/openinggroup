@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <br />
       <FooterBrand />
-      <hr className="border-t-2 border-blue-500 my-6" />
+      <hr className="border-t-1 border-gray-300 my-6 mb-20" />
 
       <FooterBadges />
       <FooterLinks />

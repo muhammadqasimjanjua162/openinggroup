@@ -6,7 +6,7 @@ import footerproperty from "../../assets/img/footer/footerpropertylogo.webp";
 const FooterBadges = () => {
   return (
     <div className="flex gap-x-28 mx-12">
-      <div className="flex w-9/16 gap-x-6 bg-amber-200">
+      <div className="flex w-9/16 gap-x-6 ">
         <img
           src={badgeImg}
           alt="Description"
@@ -23,7 +23,7 @@ const FooterBadges = () => {
           className="w-[33%] object-contain "
         />
       </div>
-      <div className="flex gap-x-4 w-7/16 bg-amber-800">
+      <div className="flex gap-x-4 w-7/16 ">
         <img
           src={footerlogo}
           alt="Description"
