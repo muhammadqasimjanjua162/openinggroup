@@ -1,7 +1,80 @@
 import React from "react";
 import PropertyDisplay from "../PropertyDisplay";
+import propertyImg from "../../assets/img/propertyImages/property1.png";
 
 const FeaturedListing = () => {
+  const propertyData = [
+    {
+      id: 1,
+      totalprice: "123,45,666",
+      perMonth: "3000",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 2,
+      totalprice: "15000",
+      perMonth: "3200",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 3,
+      totalprice: "21000",
+      perMonth: "3500",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 4,
+      totalprice: "18000",
+      perMonth: "3100",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 5,
+      totalprice: "25000",
+      perMonth: "4000",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 6,
+      totalprice: "9000",
+      perMonth: "2200",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 7,
+      totalprice: "14000",
+      perMonth: "2800",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 8,
+      totalprice: "16000",
+      perMonth: "3000",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 9,
+      totalprice: "19000",
+      perMonth: "3300",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+    {
+      id: 10,
+      totalprice: "22000",
+      perMonth: "3600",
+      address: "1001 1st St.",
+      img: propertyImg,
+    },
+  ];
   return (
     <div className="bg-dodgerblue p-2 items-start">
       <div className=" text-center p-2 text-2xl bg-green-300">
@@ -31,7 +104,6 @@ const FeaturedListing = () => {
       <div className="bg-yellow-400 text-center p-2 text-2xl h-auto row-span-2">
         4
       </div>
-     
     </div>
   );
 };

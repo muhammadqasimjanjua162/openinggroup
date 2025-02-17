@@ -4,12 +4,12 @@ const PropertyDisplay = ({ totalprice, perMonth, img, address }) => {
   console.log(img, "img");
   console.log(address, "dress");
   return (
-    <div className="property-display flex flex-col md:flex-row relative overflow-hidden group">
-      <div className="w-full bg-amber-300 border">
+    <div className="property-display w-full h-full flex flex-col md:flex-row relative overflow-hidden group">
+      <div className="w-full h-full bg-amber-300 border">
         <img
           src={img}
           alt="Property"
-          className="w-full h-auto  hover:scale-125 ease-in duration-500"
+          className="w-full h-full object-cover  hover:scale-125 ease-in duration-500"
         />
         <div className=" flex flex-wrap left-[30%] text-white absolute bottom-0 gap-2 items-center  w-full">
           <p
