@@ -66,6 +66,14 @@ function HomePage() {
     },
   ];
   return (
+    // <div className="bg-red-400 grid grid-cols-1 grid-rows-[250px_auto]">
+    //   <div className="bg-green-200"></div>
+    //   <div className="grid grid-cols-3">
+    //     <div className="bg-blue-400 h-[300px]">hello</div>
+    //     <div className="bg-green-400 h-[300px]">div2</div>
+    //     <div className="bg-pink-300 h-[363px] -translate-y-16">div2</div>
+    //   </div>
+    // </div>
     <div className="grid grid-cols-12 gap-2">
       {/* Hero Section */}
       <div className="bg-gray-200 col-span-12 row-span-4 relative">
