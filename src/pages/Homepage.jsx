@@ -155,7 +155,7 @@ function HomePage() {
       <div className="bg-gray-200 col-span-12">
         <Concierge />
       </div>
-      <div className="bg-gray-200 col-span-12">
+      <div className="bg-gray-200 col-span-12 row-span-8">
         <CalltoAction />
       </div>
       <div className="bg-gray-200 col-span-12">
