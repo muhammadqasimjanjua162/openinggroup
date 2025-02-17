@@ -9,6 +9,8 @@ import PropertyDisplay from "../components/PropertyDisplay";
 import propertyImg from "./../assets/img/HomePage/Hero/slide-3.webp";
 import Media from "../components/HomePage/Media";
 import Reviews from "../components/HomePage/Reviews";
+import Concierge from "../components/HomePage/Concierge";
+import CalltoAction from "../components/HomePage/CalltoAction";
 
 function HomePage() {
   const propertyData = [
@@ -149,6 +151,12 @@ function HomePage() {
       </div>
       <div className="col-span-12">
         <Reviews />
+      </div>
+      <div className="bg-gray-200 col-span-12">
+        <Concierge />
+      </div>
+      <div className="bg-gray-200 col-span-12">
+        <CalltoAction />
       </div>
       <div className="bg-gray-200 col-span-12">
         <Footer />
