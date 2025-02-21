@@ -12,6 +12,7 @@ import Reviews from "../components/HomePage/Reviews";
 import Concierge from "../components/HomePage/Concierge";
 import CalltoAction from "../components/HomePage/CalltoAction";
 import Achivement from "../components/HomePage/Achievements";
+import Popularity from "../components/HomePage/Popularity";
 
 function HomePage() {
   const propertyData = [
@@ -167,8 +168,11 @@ function HomePage() {
       <div className="bg-gray-200 col-span-12 row-span-8">
         <CalltoAction />
       </div>
-      <div className="bg-gray-200 col-span-12 row-span-8">
+      <div className="col-span-12 row-span-8 bg-green-400">
         <Achivement />
+      </div>
+      <div className="col-span-12 row-span-8">
+        <Popularity />
       </div>
       <div className="bg-gray-200 col-span-12">
         <Footer />
