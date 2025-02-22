@@ -1,6 +1,7 @@
 import React from "react";
 import bg from "../../assets/img/HomePage/Media/popularitybg.webp";
 import blogbg from "../../assets/img/HomePage/Media/blog-bg-a.webp";
+import bg2 from "../../assets/img/HomePage/Media/bg4.webp";
 
 const Popularity = () => {
   return (
@@ -20,14 +21,14 @@ const Popularity = () => {
         <div
           className="absolute inset-0 z-0 bg-cover bg-no-repeat filter grayscale bg-blend-overlay bg-right-top w-[100%] h-[200px]"
           style={{
-            // backgroundImage: `url(${bg})`,
-            backgroundColor: "rgba(42, 42, 42, 0.7)",
-            // RGBA color for the overlay
+            backgroundColor: "rgba(42, 42, 42, 0.7)", // Overlay color
           }}
         ></div>
       </div>
+
+      {/* Main Content Container with Right Margin */}
       <div
-        className="newDiv grid grid-cols-12 gap-4"
+        className="newDiv flex gap-12"
         style={{
           backgroundImage: `url(${blogbg})`,
           backgroundPosition: "center", // Center the background image
@@ -38,9 +39,9 @@ const Popularity = () => {
           height: "100%", // Full height
         }}
       >
-        {/* Left Column (Yellow) - Spans 5 Columns */}
-        <div className="left col-span-4 bg-yellow-400">
-          <div className="p-2 text-2xl mb-20 col-span-4 row-span-2">
+        {/* Left Column (Yellow) */}
+        <div className="left w-5/11 bg-yellow-400">
+          <div className="p-2 text-2xl mb-20">
             <div className="flex items-center space-x-2 ml-24">
               <span>01</span>
               <hr className="border-t-4 w-[30px] border-red-600" />
@@ -56,7 +57,7 @@ const Popularity = () => {
                 media
               </span>
             </div>
-            <p className="flex pl-20">
+            <p className="flex pl-12 text-base">
               The Oppenheim Group receives significant attention within the real
               estate community and beyond; the brokerage is the focus of the hit
               Netflix original series, Selling Sunset and Selling the OC, as
@@ -70,42 +71,109 @@ const Popularity = () => {
           </div>
         </div>
 
-        {/* Right Column (Green) - Spans 7 Columns */}
-        <div className="right col-span-8 bg-green-400 p-6  ml-30">
-          <div className="flex">
-            <div className="flex flex-col">
-              <h3 className="uppercase text-xl font-semibold mb-2">
+        {/* Right Column (Green) */}
+        <div className="right w-5/11">
+          <div className="flex mb-8">
+            {/* Post Description Div */}
+            <div className="post-desc flex flex-col text-white bg-black px-8 py-8 w-full">
+              {/* Post Title (Link) */}
+              <a
+                href="https://la.ogroup.com/blog/see-inside-the-oppenheim-groups-newport-beach-office-before-selling-sunset-returns/"
+                className="post-title uppercase text-xl font-extrabold mb-2"
+              >
                 Architectural Digest
-              </h3>
-              <p className="text-lg mb-4">
-                See Inside the Oppenheim Group’s Newport Beach Office Before
-                Selling Sunset Returns. Jason Oppenheim gives AD an exclusive
-                look at his real estate firm’s industrial, street art–inspired
-                workspace.
-              </p>
-              <div className="relative bg-red-600 z-20">
-                <button className="absolute px-16 py-4 border border-gray-100 transform -translate-x-1/2 bottom-[-35px] left-1/2">
-                  Read More
-                </button>
-                <div className="absolute left-[50%] bottom-[-35px] transform -translate-y-1/2 w-[40px] h-[1px] bg-gray-100"></div>
+              </a>
+
+              {/* Post Content */}
+              <div className="post-content mb-4">
+                <p className="text-xs uppercase font-semibold leading-relaxed tracking-wide">
+                  See Inside the Oppenheim Group’s Newport Beach Office Before
+                  Selling Sunset Returns.
+                </p>
+                <p className="text-xs uppercase leading-relaxed tracking-wide">
+                  Jason Oppenheim gives AD an exclusive look at his real estate
+                  firm’s industrial, street art–inspired workspace.
+                </p>
+                <button>Read more</button>
               </div>
             </div>
-            <div className="flex flex-col">
-              <h3 className="uppercase text-xl font-semibold mb-2">
+
+            {/* Image Div */}
+            <div className="w-full flex justify-center items-center">
+              <img
+                src={bg2}
+                alt="Background Image"
+                className="w-full h-full object-cover flex-grow"
+              />
+            </div>
+          </div>
+
+          <div className="flex mb-8">
+            {/* Post Description Div */}
+            <div className="post-desc flex flex-col text-white bg-black px-8 py-8 w-full">
+              {/* Post Title (Link) */}
+              <a
+                href="https://la.ogroup.com/blog/see-inside-the-oppenheim-groups-newport-beach-office-before-selling-sunset-returns/"
+                className="post-title uppercase text-xl font-extrabold mb-2"
+              >
                 Architectural Digest
-              </h3>
-              <p className="text-lg mb-4">
-                See Inside the Oppenheim Group’s Newport Beach Office Before
-                Selling Sunset Returns. Jason Oppenheim gives AD an exclusive
-                look at his real estate firm’s industrial, street art–inspired
-                workspace.
-              </p>
-              <div className="relative bg-red-600 z-20">
-                <button className="absolute px-16 py-4 border border-gray-100 transform -translate-x-1/2 bottom-[-35px] left-1/2">
-                  Read More
-                </button>
-                <div className="absolute left-[50%] bottom-[-35px] transform -translate-y-1/2 w-[40px] h-[1px] bg-gray-100"></div>
+              </a>
+
+              {/* Post Content */}
+              <div className="post-content mb-4">
+                <p className="text-xs uppercase font-semibold leading-relaxed tracking-wide">
+                  See Inside the Oppenheim Group’s Newport Beach Office Before
+                  Selling Sunset Returns.
+                </p>
+                <p className="text-xs uppercase leading-relaxed tracking-wide">
+                  Jason Oppenheim gives AD an exclusive look at his real estate
+                  firm’s industrial, street art–inspired workspace.
+                </p>
+                <button>Read more</button>
               </div>
+            </div>
+
+            {/* Image Div */}
+            <div className="w-full flex justify-center items-center">
+              <img
+                src={bg2}
+                alt="Background Image"
+                className="w-full h-full object-cover flex-grow"
+              />
+            </div>
+          </div>
+          <div className="flex mb-8">
+            {/* Post Description Div */}
+            <div className="post-desc flex flex-col text-white bg-black px-8 py-8 w-full">
+              {/* Post Title (Link) */}
+              <a
+                href="https://la.ogroup.com/blog/see-inside-the-oppenheim-groups-newport-beach-office-before-selling-sunset-returns/"
+                className="post-title uppercase text-xl font-extrabold mb-2"
+              >
+                Architectural Digest
+              </a>
+
+              {/* Post Content */}
+              <div className="post-content mb-4">
+                <p className="text-xs uppercase font-semibold leading-relaxed tracking-wide">
+                  See Inside the Oppenheim Group’s Newport Beach Office Before
+                  Selling Sunset Returns.
+                </p>
+                <p className="text-xs uppercase leading-relaxed tracking-wide">
+                  Jason Oppenheim gives AD an exclusive look at his real estate
+                  firm’s industrial, street art–inspired workspace.
+                </p>
+                <button>Read more</button>
+              </div>
+            </div>
+
+            {/* Image Div */}
+            <div className="w-full flex justify-center items-center">
+              <img
+                src={bg2}
+                alt="Background Image"
+                className="w-full h-full object-cover flex-grow"
+              />
             </div>
           </div>
         </div>

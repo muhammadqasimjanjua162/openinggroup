@@ -13,6 +13,7 @@ import Concierge from "../components/HomePage/Concierge";
 import CalltoAction from "../components/HomePage/CalltoAction";
 import Achivement from "../components/HomePage/Achievements";
 import Popularity from "../components/HomePage/Popularity";
+import Clientreview from "../components/HomePage/ClientsReview";
 
 function HomePage() {
   const propertyData = [
@@ -173,6 +174,9 @@ function HomePage() {
       </div>
       <div className="col-span-12 row-span-8">
         <Popularity />
+      </div>
+      <div className="col-span-12 row-span-8">
+        <Clientreview />
       </div>
       <div className="bg-gray-200 col-span-12">
         <Footer />
