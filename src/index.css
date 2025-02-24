@@ -48,3 +48,41 @@
 .ant-slider .ant-slider-handle::after {
   display: none;
 }
+/* Styling for the previous and next arrows */
+
+/* Styling for the previous arrow */
+.slick-prev {
+  left: 10px;
+  color: red;
+  background-color: green; /* Position the "previous" arrow */
+}
+
+/* Styling for the next arrow */
+.slick-next {
+  right: 10px;
+  color: #9c2f1c;
+  background-color: red; /* Position the "next" arrow */
+}
+
+/* Optional: You can add an icon or text inside the arrows (for visibility) */
+.slick-prev:before,
+.slick-next:before {
+  position: absolute;
+  content: ""; /* Use empty content for custom icons or text */
+  color: white; /* Ensure visibility of arrows */
+  font-size: 30px;
+  /* Adjust the icon size */
+}
+
+/* Remove margin and padding from the slick track */
+.slick-track {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Allow track to be flexible */
+}
+
+/* Optional: You can add responsiveness for smaller screen sizes */
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
