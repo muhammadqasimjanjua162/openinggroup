@@ -14,6 +14,7 @@ import CalltoAction from "../components/HomePage/CalltoAction";
 import Achivement from "../components/HomePage/Achievements";
 import Popularity from "../components/HomePage/Popularity";
 import Clientreview from "../components/HomePage/ClientsReview";
+import Philanthropy from "../components/HomePage/Philanthropy";
 
 function HomePage() {
   const propertyData = [
@@ -175,8 +176,11 @@ function HomePage() {
       <div className="col-span-12 row-span-8">
         <Popularity />
       </div>
-      <div className="col-span-12 row-span-8">
+      <div className="col-span-12 row-span-8 mb-100">
         <Clientreview />
+      </div>
+      <div className="col-span-12 ">
+        <Philanthropy />
       </div>
       <div className="bg-gray-200 col-span-12">
         <Footer />
