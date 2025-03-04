@@ -116,7 +116,7 @@ const InteractiveMaps = () => {
 
       {/* Checkboxes to toggle marker visibility */}
       <MapHero />
-      <div className="flex lg:flex-row md:flex-col   border border-amber-400 w-[90%] lg:justify-between  mx-auto h-full">
+      <div className="flex flex-col sm:flex-col lg:flex-row border border-amber-400 w-[90%] h-full mx-auto sm:items-center  lg:justify-between">
         <MapHeader />
         <div className="relative flex">
           {/* Dropdown Button - Full Height */}
@@ -125,14 +125,14 @@ const InteractiveMaps = () => {
               setIsOpen(!isOpen);
               e.stopPropagation();
             }}
-            className="px-9  text-white bg-[#555555] text-2xl  focus:outline-none h-full flex items-center lg:py-0 md:py-4"
+            className="px-9  text-white bg-[#555555] text-2xl  focus:outline-none h-full flex items-center py-4  sm:py-6"
           >
             Listing Status
             <RiArrowDropDownLine className="size-6" />
           </button>
 
           {/* Second Button - Full Height */}
-          <button className="px-9  bg-[#383838] text-white text-2xl  focus:outline-none h-full flex items-center lg:py-0 md:py-4">
+          <button className="px-9  bg-[#383838] text-white text-2xl  focus:outline-none h-full flex py-4 sm:py-6 items-center">
             Price Range
             <RiArrowDropDownLine className="size-6" />
           </button>
