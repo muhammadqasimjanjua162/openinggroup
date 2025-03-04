@@ -31,7 +31,7 @@ const Achievements = () => {
               <hr className="border-t-4 w-[30px] border-red-600" />
             </div>
             <div className="flex  items-center ml-25">
-              <span className="text-7xl font-bold uppercase tracking-tighter">
+              <span className="text-7xl font-bold uppercase tracking-tighter !text-white">
                 why work with us
               </span>
             </div>

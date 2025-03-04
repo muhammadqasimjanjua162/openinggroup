@@ -19,7 +19,7 @@ const Popularity = () => {
         className="text-white p-6"
       >
         <div
-          className="absolute inset-0 z-0 bg-cover bg-no-repeat filter grayscale bg-blend-overlay bg-right-top w-[100%] h-[200px]"
+          className="absolute  inset-0 z-0 bg-cover bg-no-repeat filter grayscale bg-blend-overlay bg-right-top w-[100%] h-[200px]"
           style={{
             backgroundColor: "rgba(42, 42, 42, 0.7)", // Overlay color
           }}

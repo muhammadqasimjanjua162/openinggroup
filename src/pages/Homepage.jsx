@@ -69,6 +69,10 @@ function HomePage() {
       img: propertyImg,
     },
   ];
+
+
+  
+
   return (
     // <div className="bg-red-400 grid grid-cols-1 grid-rows-[250px_auto]">
     //   <div className="bg-green-200"></div>
@@ -109,7 +113,7 @@ function HomePage() {
       {/* Another Section */}
       {propertyData.map((property, index) => (
         <div
-          key={index}
+          key={`${index}_property`}
           className={`text-center relative p-2 text-2xl  bg-red-500 col-span-4 row-span-2 h-[60vh]
            ${
              index === 1
