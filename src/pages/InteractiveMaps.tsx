@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import MapHero from "../components/InteractiveMap/MapHero";
 import MapHeader from "../components/InteractiveMap/MapHeader";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import bg from "../assets/img/HomePage/Media/map-bg-img.webp";
 
 // Map container styling
 const containerStyle = {
@@ -93,30 +95,56 @@ const InteractiveMaps = () => {
     (location) => checkedTypes[location.type] // Only show locations whose type is checked
   );
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className="reletive">
+    <div
+      className="reletive bg-cover bg-fixed bg-center z-10"
+      style={{ backgroundImage: `url(${bg})` }}
+      onClick={() => setIsOpen(false)}
+    >
+      <div className="absolute inset-0 bg-black/50"></div>
+
       {/* Checkboxes to toggle marker visibility */}
       <MapHero />
-      <div className="flex justify-center">
+      <div className="flex lg:flex-row md:flex-col   border border-amber-400 w-[90%] lg:justify-between  mx-auto h-full">
         <MapHeader />
         <div className="relative flex">
           {/* Dropdown Button - Full Height */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="px-4 bg-blue-500 text-white text-2xl rounded-lg focus:outline-none h-full flex items-center"
+            onClick={(e) => {
+              setIsOpen(!isOpen);
+              e.stopPropagation();
+            }}
+            className="px-9  text-white bg-[#555555] text-2xl  focus:outline-none h-full flex items-center lg:py-0 md:py-4"
           >
-            Listing Status ▼
+            Listing Status
+            <RiArrowDropDownLine className="size-6" />
           </button>
 
           {/* Second Button - Full Height */}
-          <button className="px-4 bg-blue-500 text-white text-2xl rounded-lg focus:outline-none h-full flex items-center">
-            Price Range ▼
+          <button className="px-9  bg-[#383838] text-white text-2xl  focus:outline-none h-full flex items-center lg:py-0 md:py-4">
+            Price Range
+            <RiArrowDropDownLine className="size-6" />
           </button>
 
           {/* Dropdown Menu */}
+          {/* Dropdown Menu */}
           {isOpen && (
-            <div className="checkbox-container text-2xl flex flex-col absolute z-10 bg-white shadow-md border border-gray-300 mt-2 w-56 p-4 rounded-lg">
+            <div
+              ref={dropdownRef}
+              className="checkbox-container text-2xl flex flex-col absolute z-10 bg-white shadow-md border border-gray-300 mt-2 w-56 p-4 rounded-lg"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            >
               {["active", "sold", "leased", "commercial"].map((type) => (
                 <label key={type} className="flex items-center space-x-2">
                   <input
