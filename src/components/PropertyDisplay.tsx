@@ -1,6 +1,7 @@
 import React from "react";
+import img from "../assets/img/propertyImages/new.webp";
 
-const PropertyDisplay = ({ totalprice, perMonth, img, address }) => {
+const PropertyDisplay = ({ totalprice, address }) => {
   console.log(img, "img");
   console.log(address, "dress");
   return (
@@ -16,10 +17,10 @@ const PropertyDisplay = ({ totalprice, perMonth, img, address }) => {
             className="text-2xl font-bold mb-0"
             style={{ marginBottom: 0 }}
           >{`$${totalprice}`}</p>
-          <p className="text-lg" style={{ marginBottom: 0 }}>
+          {/* <p className="text-lg" style={{ marginBottom: 0 }}>
             {" "}
             {perMonth}
-          </p>
+          </p> */}
           <p className="text-lg  text-white" style={{ marginBottom: 0 }}>
             {address}
           </p>

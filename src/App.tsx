@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "../src/pages/Homepage";
 import PropertiesPage from "./pages/PropertiesPage";
 import InteractiveMaps from "./pages/InteractiveMaps";
+
 const App: React.FC = () => {
   return (
     <Router>
