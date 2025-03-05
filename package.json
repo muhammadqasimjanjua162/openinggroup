@@ -14,6 +14,8 @@
     "@googlemaps/react-wrapper": "^1.1.42",
     "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/vite": "^4.0.3",
+    "@tanstack/react-query": "^5.67.1",
+    "@tanstack/react-query-devtools": "^5.67.1",
     "@types/google-map-react": "^2.1.10",
     "@types/react-slick": "^0.23.13",
     "antd": "^5.23.4",

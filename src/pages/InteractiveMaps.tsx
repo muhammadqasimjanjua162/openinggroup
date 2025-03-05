@@ -105,6 +105,7 @@ const InteractiveMaps = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+  console.log(isOpen, "openn");
 
   return (
     <div
@@ -112,20 +113,22 @@ const InteractiveMaps = () => {
       style={{ backgroundImage: `url(${bg})` }}
       onClick={() => setIsOpen(false)}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
       {/* Checkboxes to toggle marker visibility */}
       <MapHero />
       <div className="flex flex-col sm:flex-col lg:flex-row border border-amber-400 w-[90%] h-full mx-auto sm:items-center  lg:justify-between">
         <MapHeader />
-        <div className="relative flex">
+        <div className="relative flex bg-green-400">
           {/* Dropdown Button - Full Height */}
           <button
             onClick={(e) => {
               setIsOpen(!isOpen);
               e.stopPropagation();
             }}
-            className="px-9  text-white bg-[#555555] text-2xl  focus:outline-none h-full flex items-center py-4  sm:py-6"
+            className={`px-9  !text-sm  !text-white bg-[#555555] ${
+              isOpen ? "bg-[#e51937]" : "bg-[#555555]"
+            } hover:bg-[#e51937] active:bg[#e51937]  focus:outline-none h-full flex items-center py-4  sm:py-6 !uppercase`}
           >
             Listing Status
             <RiArrowDropDownLine className="size-6" />
@@ -142,25 +145,61 @@ const InteractiveMaps = () => {
           {isOpen && (
             <div
               ref={dropdownRef}
-              className="checkbox-container text-2xl flex flex-col absolute z-10 bg-white shadow-md border border-gray-300 mt-2 w-56 p-4 rounded-lg"
+              className="checkbox-container text-2xl flex flex-col absolute z-10 bg-white shadow-md border border-gray-300 mt-18 w-48 p-4"
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
             >
-              {["active", "sold", "leased", "commercial"].map((type) => (
-                <label key={type} className="flex items-center space-x-2">
-                  <input
-                    type="checkbox"
-                    checked={checkedTypes[type]}
-                    onChange={() =>
-                      setCheckedTypes((prev) => ({
-                        ...prev,
-                        [type]: !prev[type],
-                      }))
-                    }
-                    className="w-5 h-5"
-                  />
-                  <span className="capitalize">{type}</span>
-                </label>
-              ))}
+              {["active", "sold", "leased", "commercial"].map((type) => {
+                const typeColors = {
+                  active: "bg-green-500",
+                  sold: "bg-red-500",
+                  leased: "bg-blue-500",
+                  commercial: "bg-yellow-500",
+                };
+                return (
+                  <label
+                    key={type}
+                    className="flex items-center space-x-2 cursor-pointer"
+                  >
+                    {/* Checkbox Input */}
+                    <input
+                      type="checkbox"
+                      checked={checkedTypes[type]}
+                      onChange={() =>
+                        setCheckedTypes((prev) => ({
+                          ...prev,
+                          [type]: !prev[type],
+                        }))
+                      }
+                      className="peer hidden"
+                    />
+
+                    {/* Custom Checkbox UI */}
+                    <div className="w-4 h-4 border border-gray-400 rounded-sm bg-white peer-checked:bg-red-500 flex items-center justify-center">
+                      {/* Checkmark Icon (only appears when checked) */}
+                      <svg
+                        className="w-3 h-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M20.28 5.22a.75.75 0 0 1 0 1.06l-10 10a.75.75 0 0 1-1.06 0l-5-5a.75.75 0 1 1 1.06-1.06L9 14.44l9.72-9.72a.75.75 0 0 1 1.06 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+
+                    {/* Label with Colored Indicator */}
+                    <div className="mb-6 sm:mb-0 bg-green-50 flex items-center">
+                      <span
+                        className={`w-4 h-4 rounded-full inline-block mr-2 ${typeColors[type]}`}
+                      ></span>
+                      <span className="text-sm capitalize">{type}</span>
+                    </div>
+                  </label>
+                );
+              })}
             </div>
           )}
         </div>
@@ -178,7 +217,7 @@ const InteractiveMaps = () => {
                 position={item.location}
                 icon={{
                   path: "M 0,0 A 1,1 0 1,1 0,-0.0001 A 1,1 0 1,1 0,0 Z", // Custom marker path (round shape)
-                  scale: 20, // Make the marker bigger
+                  scale: 14, // Make the marker bigger
                   fillColor: color, // Fill color of the marker
                   fillOpacity: 1, // Full opacity
                   strokeWeight: 3, // Border thickness
